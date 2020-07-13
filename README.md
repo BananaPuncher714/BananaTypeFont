@@ -36,6 +36,9 @@ public class ExampleRenderer extends MapRenderer {
 }
 ```
 
+### Other links
+* [Spigot](https://www.spigotmc.org/threads/451390/)
+
 ## Format specification
 ### Version 1
 **Header**  
