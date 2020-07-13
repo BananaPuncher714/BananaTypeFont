@@ -38,7 +38,7 @@ public class ExampleRenderer extends MapRenderer {
 
 ## Format specification
 ### Version 1
-**Header**
+**Header**  
 Contains information about the file and font
 |**Name**|**Size**|**Description**|
 |-|-|-|
@@ -52,13 +52,12 @@ Contains information about the file and font
 |Description length |1 byte   |Length of the description  |
 |Description        |Variable |The description of the font|
 
-**Data**
+**Data**  
 Contains an arbitrary amount of character mappings. Each character mapping has a format as follows:
 |**Name**|**Size**|**Description**|
 |-|-|-|
 |Character|2 bytes |Unicode character value|
 |Width    |1 byte  |Width of the character |
 |Height   |1 byte  |Height of the character|
-|Bitmap   |Variable|Data of the character  |
-
+|Bitmap   |Variable|Data of the character  |  
 Each pixel of the character corresponds to a bit in the bitmap. So, if the height and width were 16, the bitmap would consist of 32 bytes. If the total amount of pixels in the character is not divisible by 8, then the last byte is padded with zeros. The first bit corresponds to the bottom left most pixel, and the last bit corresponds to the top right most pixel.
