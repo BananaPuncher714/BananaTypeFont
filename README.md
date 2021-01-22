@@ -17,9 +17,9 @@ BananaTypeFont defaultFont;
 BananaTypeFont asciiFont;
 BananaTypeFont unicodeFont;
 try {
-    defaultFont = BananaFont.from( getResource( "minecraft-font.btf" ) ) );
-    asciiFont = BananaFont.from( getResource( "minecraft-font-ascii.btf" ) ) );
-    unicodeFont = BananaFont.from( getResource( "minecraft-font-unicode.btf" ) ) );
+    defaultFont = BananaTypeFont.from( getResource( "minecraft-font.btf" ) ) );
+    asciiFont = BananaTypeFont.from( getResource( "minecraft-font-ascii.btf" ) ) );
+    unicodeFont = BananaTypeFont.from( getResource( "minecraft-font-unicode.btf" ) ) );
 } catch ( IOException e ) {
     e.printStackTrace();
 }
@@ -63,5 +63,5 @@ Contains an arbitrary amount of character mappings. Each character mapping has a
 |Width    |1 byte  |Width of the character |
 |Height   |1 byte  |Height of the character|
 |Bitmap   |Variable|Data of the character  |  
----
+
 Each pixel of the character corresponds to a bit in the bitmap. So, if the height and width were 16, the bitmap would consist of 32 bytes. If the total amount of pixels in the character is not divisible by 8, then the last byte is padded with zeros. The first bit corresponds to the bottom left most pixel, and the last bit corresponds to the top right most pixel.
